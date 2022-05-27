@@ -29,7 +29,7 @@ void	cd(char **cmd)
 		i++;
 	if (i != 2)
 		write(2, error_arg, ft_strlen(error_arg));
-	if (chdir(cmd[1]) == -1)
+	else if (chdir(cmd[1]) == -1)
 	{
 		write(2, error_dir, ft_strlen(error_dir));
 		write(2, cmd[1], ft_strlen(cmd[1]));
